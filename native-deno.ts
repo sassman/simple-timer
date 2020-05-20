@@ -1,7 +1,7 @@
 import { WebView } from "https://deno.land/x/webview/mod.ts";
 
 const sharedOptions = {
-  width: 600,
+  width: 800,
   height: 700,
   resizable: false,
   debug: true,

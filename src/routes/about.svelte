@@ -1,8 +1,21 @@
+<script lang="typescript">
+  const code = `deno run --unstable --allow-env \\
+    --allow-read --allow-write --allow-plugin \\
+    --allow-net -A -r \\
+    https://raw.githubusercontent.com/sassman/simple-timer/master/native-deno.ts`;
+</script>
+
 <style lang="scss">
   pre {
-    background-color: #d1d1d1;
     font-family: monospace;
+  }
+  pre {
+    background-color: #eeeeee;
     padding: 0.5rem 1rem;
+    overflow: scroll;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
   }
 </style>
 
@@ -28,11 +41,8 @@
 
 <p>You can run this as deno app:</p>
 
-<pre>
-  deno run --unstable --allow-env --allow-read --allow-write --allow-plugin \
-  --allow-net -A -r \
-  https://raw.githubusercontent.com/sassman/simple-timer/master/native-deno.ts
-</pre>
+<!-- prettier-ignore -->
+<pre>{code}</pre>
 
 <p>
   <a href="https://github.com/sassman/simple-timer" target="_blank">

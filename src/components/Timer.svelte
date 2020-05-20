@@ -1,10 +1,10 @@
-<script>
+<script lang="typescript">
   let s = 0;
   let m = 0;
   let active = false;
-  let timer;
+  let timer: number;
 
-  function setActive(a) {
+  function setActive(a: boolean) {
     active = a;
     if (!active) {
       clearInterval(timer);

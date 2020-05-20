@@ -1,6 +1,5 @@
 import { WebView } from "https://deno.land/x/webview/mod.ts";
 
-const contentType = "text/html";
 const sharedOptions = {
   width: 600,
   height: 700,
@@ -9,10 +8,10 @@ const sharedOptions = {
   frameless: false,
 };
 
-const webview1 = new WebView({
-  title: "Deno-Sapper Timer App",
+const webview = new WebView({
+  title: "Simple Timer",
   url: "https://simple-timer.now.sh/",
   ...sharedOptions,
 });
 
-await webview1.run();
+await webview.run();

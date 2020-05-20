@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "simple-timer",
+  "description": "A simple timer for the web, to explore sapper and svelte further",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",

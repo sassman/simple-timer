@@ -9,7 +9,8 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
+    "test": "run-p --race dev cy:run",
+    "start:native": "deno run --unstable --allow-env --allow-read --allow-write --allow-plugin --allow-net -A -r native-deno.ts"
   },
   "dependencies": {
     "compression": "^1.7.1",

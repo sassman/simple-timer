@@ -21,7 +21,9 @@
   }
 </script>
 
-<style>
+<style lang="scss">
+  @import "../style/responsive.scss";
+
   div,
   span {
     font-size: 6rem;
@@ -31,7 +33,7 @@
   }
   button {
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2.6rem;
     padding: 0.5rem 1rem;
     width: 12rem;
     border: gray 1px solid;
@@ -42,6 +44,37 @@
   }
   button:hover {
     background-color: #97b498;
+  }
+  @include media("<=sm") {
+    button {
+      font-size: 1.6rem;
+      width: fit-content;
+    }
+    div,
+    span {
+      font-size: 3.5rem;
+    }
+  }
+  @include media(">sm", "<=md") {
+    button {
+      font-size: 1.8rem;
+      width: 8rem;
+    }
+    div,
+    span {
+      font-size: 4rem;
+    }
+  }
+
+  @include media(">md", "<=lg") {
+    button {
+      font-size: 2rem;
+      width: 10rem;
+    }
+    div,
+    span {
+      font-size: 5rem;
+    }
   }
 </style>
 

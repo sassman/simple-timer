@@ -13,6 +13,10 @@
 
 <svelte:head>
   <title>Simple Timer</title>
+  <meta
+    name="description"
+    content="simple timer showcase, made with svelte and sapper to illustrate a
+    deno native app" />
 </svelte:head>
 
 <h1>Start your timer!</h1>

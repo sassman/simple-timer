@@ -21,22 +21,28 @@
 
 <svelte:head>
   <title>About Simple Timer</title>
+  <meta
+    name="description"
+    content="simple timer showcase, made with svelte and sapper to illustrate a
+    deno native app" />
 </svelte:head>
 
 <h1>Simple Timer</h1>
 
 <p>
   This is a simple showcase how
-  <a href="https://svelte.dev/" target="_blank">#svelte</a>
+  <a href="https://svelte.dev/" rel="noreferrer" target="_blank">#svelte</a>
   and
-  <a href="https://sapper.svelte.dev/" target="_blank">#sapper</a>
+  <a href="https://sapper.svelte.dev/" rel="noreferrer" target="_blank">
+    #sapper
+  </a>
   can be used to build a reactive timer app.
   <span>It uses typescript and sass/scss.</span>
 </p>
 
 <p>
   Additionally it demonstrate how to run a native (web)app with
-  <a href="https://deno.land/" target="_blank">#deno</a>
+  <a href="https://deno.land/" rel="noreferrer" target="_blank">#deno</a>
 </p>
 
 <p>You can run this as deno app:</p>
@@ -45,7 +51,10 @@
 <pre>{code}</pre>
 
 <p>
-  <a href="https://github.com/sassman/simple-timer" target="_blank">
+  <a
+    href="https://github.com/sassman/simple-timer"
+    rel="noreferrer"
+    target="_blank">
     You can find the whole code on github
     <svg
       class="octicon octicon-mark-github v-align-middle"

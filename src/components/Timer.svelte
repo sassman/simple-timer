@@ -1,23 +1,26 @@
 <script lang="typescript">
-  let s = 0;
-  let m = 0;
+  let timerId: number;
+  let ticks: number = 0;
   let active = false;
-  let timer: number;
 
-  function setActive(a: boolean) {
-    active = a;
-    if (!active) {
-      clearInterval(timer);
-    } else {
-      timer = setInterval(() => {
-        if (s == 59) {
-          s = 0;
-          m += 1;
-        } else {
-          s += 1;
-        }
-      }, 1000);
+  function startTimer() {
+    stopTimer();
+    active = true;
+    timerId = setInterval(() => {
+      ticks++;
+    }, 1000);
+  }
+
+  function stopTimer() {
+    if (timerId) {
+      clearInterval(timerId);
+      timerId = undefined;
+      active = false;
     }
+  }
+
+  function toggleTimer() {
+    active ? stopTimer() : startTimer();
   }
 </script>
 
@@ -78,12 +81,14 @@
   }
 </style>
 
-<button on:click={() => setActive(!active)}>
-  {!active ? 'Start' : 'Stop'}
-</button>
+<button on:click={toggleTimer}>{!active ? 'Start' : 'Stop'}</button>
 
 <div>
-  <span>{m.toString().padStart(2, 0)}</span>
+  <span>
+    {parseInt(ticks / 60)
+      .toString()
+      .padStart(2, 0)}
+  </span>
   :
-  <span>{s.toString().padStart(2, 0)}</span>
+  <span>{(ticks % 60).toString().padStart(2, 0)}</span>
 </div>

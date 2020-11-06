@@ -10,13 +10,15 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
-    "start:native": "deno run --unstable --allow-env --allow-read --allow-write --allow-plugin --allow-net -A -r native-deno.ts"
+    "start:native": "deno run --unstable --allow-env --allow-read --allow-write --allow-plugin --allow-net -A -r native-deno.ts",
+    "tauri": "tauri"
   },
   "dependencies": {
     "compression": "^1.7.1",
     "polka": "next",
     "sapper-google-analytics": "^1.0.1",
-    "sirv": "^0.4.0"
+    "sirv": "^0.4.0",
+    "tauri": "^0.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
